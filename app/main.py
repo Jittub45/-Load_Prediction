@@ -77,7 +77,7 @@ HTML_PAGE = """
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            background: #C2CDBC;
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -93,23 +93,22 @@ HTML_PAGE = """
             align-items: start;
         }
         .container {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: #f5f7f4;
+            border: 1px solid #b0bda8;
             border-radius: 20px;
             padding: 40px;
             width: 100%;
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
         }
         h1 {
-            color: #fff;
+            color: #2d3a29;
             text-align: center;
             margin-bottom: 8px;
             font-size: 28px;
             font-weight: 700;
         }
         .subtitle {
-            color: rgba(255, 255, 255, 0.6);
+            color: #6b7c65;
             text-align: center;
             margin-bottom: 30px;
             font-size: 14px;
@@ -119,32 +118,32 @@ HTML_PAGE = """
         }
         label {
             display: block;
-            color: rgba(255, 255, 255, 0.8);
+            color: #3d4a38;
             font-size: 13px;
             margin-bottom: 6px;
             font-weight: 500;
         }
         label .hint {
-            color: rgba(255, 255, 255, 0.4);
+            color: #8a9a83;
             font-weight: 400;
         }
         input {
             width: 100%;
             padding: 12px 16px;
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.15);
+            background: #fff;
+            border: 1px solid #b0bda8;
             border-radius: 10px;
-            color: #fff;
+            color: #2d3a29;
             font-size: 15px;
             transition: all 0.3s;
             outline: none;
         }
         input:focus {
-            border-color: #6c63ff;
-            background: rgba(255, 255, 255, 0.12);
-            box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.2);
+            border-color: #6b8f5e;
+            background: #fff;
+            box-shadow: 0 0 0 3px rgba(107, 143, 94, 0.2);
         }
-        input::placeholder { color: rgba(255, 255, 255, 0.3); }
+        input::placeholder { color: #a3b29d; }
         .row {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -153,7 +152,7 @@ HTML_PAGE = """
         .btn {
             width: 100%;
             padding: 14px;
-            background: linear-gradient(135deg, #6c63ff, #3f51b5);
+            background: linear-gradient(135deg, #6b8f5e, #4a7040);
             color: #fff;
             border: none;
             border-radius: 12px;
@@ -166,7 +165,7 @@ HTML_PAGE = """
         }
         .btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(108, 99, 255, 0.4);
+            box-shadow: 0 8px 25px rgba(74, 112, 64, 0.4);
         }
         .btn:active { transform: translateY(0); }
         .btn:disabled {
@@ -177,15 +176,15 @@ HTML_PAGE = """
         .result {
             margin-top: 24px;
             padding: 24px;
-            background: rgba(255, 255, 255, 0.06);
+            background: #eaf0e8;
             border-radius: 14px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid #b0bda8;
             display: none;
         }
         .result.show { display: block; animation: fadeIn 0.4s ease; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
         .result-label {
-            color: rgba(255, 255, 255, 0.5);
+            color: #6b7c65;
             font-size: 12px;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -196,11 +195,11 @@ HTML_PAGE = """
             font-weight: 700;
             margin-bottom: 16px;
         }
-        .light { color: #2ecc71; }
-        .medium { color: #f39c12; }
-        .maximum { color: #e74c3c; }
+        .light { color: #3a7d3a; }
+        .medium { color: #b8860b; }
+        .maximum { color: #c0392b; }
         .confidence {
-            color: rgba(255, 255, 255, 0.7);
+            color: #4a5c45;
             font-size: 14px;
             margin-bottom: 16px;
         }
@@ -210,14 +209,14 @@ HTML_PAGE = """
         .prob-label {
             display: flex;
             justify-content: space-between;
-            color: rgba(255, 255, 255, 0.7);
+            color: #4a5c45;
             font-size: 13px;
             margin-bottom: 4px;
         }
         .prob-bar {
             height: 8px;
             border-radius: 4px;
-            background: rgba(255, 255, 255, 0.1);
+            background: #d4ddd0;
             overflow: hidden;
         }
         .prob-bar-fill {
@@ -226,23 +225,22 @@ HTML_PAGE = """
             transition: width 0.6s ease;
         }
         .error {
-            color: #e74c3c;
+            color: #c0392b;
             text-align: center;
             margin-top: 16px;
             font-size: 14px;
         }
         .sidebar {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: #f5f7f4;
+            border: 1px solid #b0bda8;
             border-radius: 20px;
             padding: 24px;
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
             position: sticky;
             top: 20px;
         }
         .samples-title {
-            color: rgba(255,255,255,0.7);
+            color: #3d4a38;
             font-size: 13px;
             font-weight: 600;
             text-transform: uppercase;
@@ -256,8 +254,8 @@ HTML_PAGE = """
             gap: 12px;
         }
         .sample-card {
-            background: rgba(255,255,255,0.06);
-            border: 1px solid rgba(255,255,255,0.1);
+            background: #eaf0e8;
+            border: 1px solid #b0bda8;
             border-radius: 10px;
             padding: 14px;
             cursor: pointer;
@@ -265,8 +263,8 @@ HTML_PAGE = """
             text-align: center;
         }
         .sample-card:hover {
-            background: rgba(255,255,255,0.12);
-            border-color: rgba(255,255,255,0.25);
+            background: #dce5d9;
+            border-color: #8a9a83;
             transform: translateY(-2px);
         }
         @media (max-width: 800px) {
@@ -285,25 +283,25 @@ HTML_PAGE = """
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
-        .sample-card .badge.light { background: rgba(46,204,113,0.2); color: #2ecc71; }
-        .sample-card .badge.medium { background: rgba(243,156,18,0.2); color: #f39c12; }
-        .sample-card .badge.maximum { background: rgba(231,76,60,0.2); color: #e74c3c; }
+        .sample-card .badge.light { background: rgba(58,125,58,0.15); color: #3a7d3a; }
+        .sample-card .badge.medium { background: rgba(184,134,11,0.15); color: #b8860b; }
+        .sample-card .badge.maximum { background: rgba(192,57,43,0.15); color: #c0392b; }
         .sample-card .sample-detail {
-            color: rgba(255,255,255,0.5);
+            color: #6b7c65;
             font-size: 10px;
             line-height: 1.6;
             text-align: left;
         }
         .sample-card .sample-detail span {
-            color: rgba(255,255,255,0.8);
+            color: #2d3a29;
             font-weight: 500;
         }
         .sample-card .try-btn {
             display: inline-block;
             margin-top: 8px;
             padding: 4px 14px;
-            background: rgba(108,99,255,0.3);
-            color: #fff;
+            background: rgba(107,143,94,0.3);
+            color: #2d3a29;
             border: none;
             border-radius: 6px;
             font-size: 11px;
@@ -311,14 +309,14 @@ HTML_PAGE = """
             transition: background 0.2s;
         }
         .sample-card .try-btn:hover {
-            background: rgba(108,99,255,0.6);
+            background: rgba(107,143,94,0.5);
         }
     </style>
 </head>
 <body>
     <div class="page-wrapper">
     <div class="container">
-        <h1>&#9889; Load Type Predictor</h1>
+        <h1>Load Type Predictor</h1>
         <p class="subtitle">Predict power system load type from energy consumption data</p>
 
         <form id="predForm">
@@ -374,22 +372,22 @@ HTML_PAGE = """
 
             <div class="prob-bar-container">
                 <div class="prob-label"><span>Light Load</span><span id="probLight">0%</span></div>
-                <div class="prob-bar"><div class="prob-bar-fill" id="barLight" style="width:0%;background:#2ecc71;"></div></div>
+                <div class="prob-bar"><div class="prob-bar-fill" id="barLight" style="width:0%;background:#3a7d3a;"></div></div>
             </div>
             <div class="prob-bar-container">
                 <div class="prob-label"><span>Medium Load</span><span id="probMedium">0%</span></div>
-                <div class="prob-bar"><div class="prob-bar-fill" id="barMedium" style="width:0%;background:#f39c12;"></div></div>
+                <div class="prob-bar"><div class="prob-bar-fill" id="barMedium" style="width:0%;background:#b8860b;"></div></div>
             </div>
             <div class="prob-bar-container">
                 <div class="prob-label"><span>Maximum Load</span><span id="probMax">0%</span></div>
-                <div class="prob-bar"><div class="prob-bar-fill" id="barMax" style="width:0%;background:#e74c3c;"></div></div>
+                <div class="prob-bar"><div class="prob-bar-fill" id="barMax" style="width:0%;background:#c0392b;"></div></div>
             </div>
         </div>
     </div>
 
     <!-- Sidebar: Sample Data -->
     <div class="sidebar">
-        <div class="samples-title">Sample Data from CSV<br><small style="font-weight:400;font-size:10px;letter-spacing:0;text-transform:none;color:rgba(255,255,255,0.4);">Click to auto-fill the form</small></div>
+        <div class="samples-title">Sample Data from CSV<br><small style="font-weight:400;font-size:10px;letter-spacing:0;text-transform:none;color:#8a9a83;">Click to auto-fill the form</small></div>
         <div class="sample-cards">
             <div class="sample-card" onclick="fillSample('light')">
                 <div class="badge light">Light Load</div>

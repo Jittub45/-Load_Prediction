@@ -1,5 +1,5 @@
 # LIVE SITE
-🔗 **https://load-prediction-9zp5.onrender.com/**
+🔗 **[https://load-type-predictor.onrender.com](https://load-type-predictor.onrender.com)**
 
 <br>
 
