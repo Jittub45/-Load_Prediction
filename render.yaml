@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: load-type-predictor
+    runtime: docker
+    repo: https://github.com/YOUR_USERNAME/Assignment2
+    dockerfilePath: ./Dockerfile
+    plan: free
+    envVars:
+      - key: PORT
+        value: 10000
