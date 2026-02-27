@@ -1,11 +1,20 @@
 # LIVE SITE
-🔗 **https://load-prediction-9zp5.onrender.com/**
+🔗 **[https://load-type-predictor.onrender.com](https://load-type-predictor.onrender.com)**
 
 <br>
 
 # Load Type Predictor
 
 A machine learning model that predicts power system **Load Type** (Light / Medium / Maximum) from energy consumption data. Deployed as a FastAPI web service on Render.
+
+<br>
+
+<p align="center">
+  <img src="preview/Preview Image 1.png" alt="Load Type Predictor - Deployed Preview" width="49%" />
+  <img src="preview/Preview Image 2.png" alt="Load Type Predictor - Prediction Result" width="49%" />
+</p>
+
+<br>
 
 ## Problem Statement
 Predict the `Load_Type` of a steel industry power system using historical data. Classification into 3 classes:
@@ -111,3 +120,33 @@ Open **http://localhost:8000** — web UI with sample data for testing.
 
 ## Tech Stack
 Python • FastAPI • scikit-learn • XGBoost • LightGBM • Docker • Render
+
+---
+
+## Future Scope
+
+```
+                                      Where This Project Can Go Next
+       ┌──────────────────────────────────────────────────────────────────────────────────┐
+       │                                                                                  │
+       │   SMARTER MODELS             MLOps & AUTOMATION           EXPLAINABILITY         │
+       │   ─────────────────────      ────────────────────────     ───────────────────    │
+       │   LSTM/Transformers for      Auto-retrain on drift        SHAP/LIME to show      │
+       │   temporal patterns          MLflow model versioning      WHY a load type was    │
+       │   (93.95% → higher)          CI/CD via GitHub Actions     predicted (XAI)        │
+       │                                                                                  │
+       │   REAL-TIME & IoT            DEMAND FORECASTING           MULTI-PLANT            │
+       │   ────────────────────       ───────────────────────      ──────────────────     │
+       │   Kafka/MQTT streaming       Predict Usage_kWh ahead      Transfer/Federated     │
+       │   Edge deploy (ONNX)         Peak shaving & load          Learning across        │
+       │   SCADA integration          shifting to cut costs        multiple facilities    │
+       │                                                                                  │
+       │   ANOMALY DETECTION          BATCH & CSV UPLOAD            PROD HARDENING        │
+       │   ─────────────────────      ─────────────────────────     ───────────────────── │
+       │   Flag equipment faults      Bulk predictions via          JWT auth, rate limits │
+       │   & energy theft with        file upload + interactive     Kubernetes scaling    │
+       │   Isolation Forests          historical dashboards         Grafana monitoring    │
+       │                                                                                  │
+       └──────────────────────────────────────────────────────────────────────────────────┘
+```
+
